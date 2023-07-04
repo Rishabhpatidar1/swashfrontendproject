@@ -1,0 +1,693 @@
+
+@font-face {
+    font-family: "gilroy";
+    font-weight: 400;
+    src: url(./fonts/Gilroy-Medium.otf);
+}
+
+@font-face {
+    font-family: "gilroy";
+    font-weight: 500;
+    src: url(./fonts/Gilroy-Semibold.otf);
+}
+
+@font-face {
+    font-family: "gilroy";
+    font-weight: 600;
+    src: url(./fonts/Gilroy-Bold.otf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.main{
+    /* height: 100vh; */
+    width: 100vw;
+    padding: 0px 50px;
+}
+
+/* .about{ */
+    /* height: 100vh; */
+    /* background-color: red; */
+/* } */
+
+.nav{
+    height: 70px;
+    width: 100vw;
+    background-color: #F3F5F7;
+    padding: 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 100;
+}
+
+.left{
+    height: inherit;
+    width: 32%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+}
+
+.left::after{
+    content: "Beta";
+    font-size: 12px;
+    height: 19px;
+    width: 44px;
+    font-family: "gilroy";
+    font-weight: 400;
+    background-color: #BB09ED;
+    color: white;
+    border-radius: 40px;
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.left img{
+    height: 34px;
+}
+
+.center{
+    height: inherit;
+    width: 32%;
+    /* background-color: hotpink; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.center a{
+    font-family: "gilroy";
+    font-weight: 400;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: black;
+}
+
+.nav .active {
+    position: relative;
+}
+
+.nav .active::before{
+    content: "";
+    width: 100%;
+    height: 3px;
+    border-radius: 20px;
+    background-color: #BB09ED;
+    position: absolute;
+    bottom: -22%;
+    left: 0%;
+}
+
+.right{
+    height: inherit;
+    width: 32%;
+    /* background-color: greenyellow; */
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.right .button1{
+    font-family: "gilroy";
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 6px;
+    text-transform: capitalize;
+    background-color: white;
+    color: #BB09ED;
+    padding: 6px 26px;
+    /* letter-spacing: 1.1px; */
+    border: 1.5px solid #BB09ED;
+    margin-right: 16px;
+    cursor: pointer;
+    /* border: none; */
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.125);
+}
+
+
+.button1 a{
+    color: #BB09ED;
+}
+
+.right .button1:hover {
+    background-color: #f5f2f2;
+    transform: scale(1);
+}
+
+.button2 a{
+    color: white;
+}
+
+.right .button2:hover{
+    transform: scale(1);
+}
+
+.right .button2{
+    font-family: "gilroy";
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 6px;
+    text-transform: capitalize;
+    background-color: #BB09ED;
+    color: white;
+    padding: 6px 20px;
+    /* letter-spacing: 1.1px; */
+    /* border: 1.5px solid #BB09ED; */
+    cursor: pointer;
+    /* border: none; */
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.125);
+}
+
+.overflow{
+    height: 100vh;
+    width: 100vw;
+    background-color: #00000098;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 102;
+    display: none;
+}
+
+.popup{
+    width: 65vw;
+    height: 410px;
+    background-color: white;
+    border-radius: 24px;
+    box-shadow: 8px 8px 20px 0px rgba(0, 0, 0, 0.190);
+    padding: 20px 30px;
+}
+
+.popup h4{
+    font-family: "gilroy";
+    font-weight: 400;
+    font-size: 18px;
+    color: black;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+.popup h4 span{
+    font-weight: 600;
+}
+
+.popup .button2{
+    font-family: "gilroy";
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 6px;
+    text-transform: capitalize;
+    background-color: #BB09ED;
+    color: white;
+    padding: 6px 20px;
+    /* letter-spacing: 1.1px; */
+    /* border: 1.5px solid #BB09ED; */
+    transform: scale(1);
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.190);
+    cursor: pointer;
+    border: none;
+}
+
+.popup .button2:hover{
+    transform: scale(1.03);
+}
+
+.maintxt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0px;
+    /* background-color: green; */
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+#tag{
+    font-family: "gilroy";
+    font-weight: 400;
+    font-size: 18px;
+    color: black;
+    width: 80%;
+    text-align: center;
+    line-height: 46px;
+    margin-bottom: 20px;
+    /* margin-top: 60px; */
+}
+
+.card1{
+    padding: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.card1 .l1{
+    width: 50%;
+}
+
+.card1 img{
+    height: 500px;
+}
+
+.card1 .r1{
+    height: inherit;
+    width: 75%;
+}
+
+.card1 .r1 p{
+    font-family: "gilroy";
+    font-weight: 400;
+    font-size: 18px;
+    color: black;
+    line-height: 50px;
+}
+
+
+.card2{
+    padding: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.card2 .r2{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card2 img{
+    height: 500px;
+}
+
+.card2 .l2{
+    height: inherit;
+    width: 75%;
+}
+
+.card2 .l2 p{
+    font-family: "gilroy";
+    font-weight: 400;
+    font-size: 18px;
+    color: black;
+    line-height: 50px;
+}
+
+.card2 .l2 p span{
+    font-weight: 600;
+}
+
+.card2 .l2 p .button2{
+    font-family: "gilroy";
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 6px;
+    text-transform: capitalize;
+    background-color: #BB09ED;
+    color: white;
+    padding: 6px 20px;
+    /* letter-spacing: 1.1px; */
+    /* border: 1.5px solid #BB09ED; */
+    cursor: pointer;
+    /* border: none; */
+    transform: scale(1);
+    /* transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s; */
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.125);
+}
+
+.card2 .l2 p .button2:hover{
+    transform: scale(1.02);
+    /* transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s; */
+}
+
+
+
+.footer{
+    /* height: 70vh; */
+    background-color: #F1BEFF;
+    padding: 40px 60px;
+}
+
+.footer img{
+    height: 34px;
+}
+
+.footer #p1{
+    font-family: "gilroy";
+    font-weight: 400;
+    margin-top: 20px;
+    color: black;
+    font-size: 18px;
+    line-height: 40px;
+    width: 80%;
+}
+
+.footer #p1 span{
+    font-weight: 600;
+}
+
+.footer #p1 .button2{
+    font-family: "gilroy";
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 6px;
+    text-transform: capitalize;
+    background-color: #BB09ED;
+    color: white;
+    padding: 6px 20px;
+    /* letter-spacing: 1.1px; */
+    /* border: 1.5px solid #BB09ED; */
+    cursor: pointer;
+    /* border: none; */
+    transform: scale(1);
+    /* transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s; */
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.138);
+}
+
+.footer #p1 .button2 a{
+    color: white;
+}
+
+.footer #p1 .button2:hover{
+    transform: scale(1.02);
+    /* transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s; */
+}
+
+.footer #p2{
+    font-family: "gilroy";
+    font-weight: 400;
+    margin-top: 20px;
+    color: black;
+    font-size: 18px;
+    line-height: 40px;
+    width: 80%;
+}
+
+.footer #p2 span{
+    font-weight: 600;
+}
+
+.footer #p2 .button2{
+    font-family: "gilroy";
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 6px;
+    text-transform: capitalize;
+    background-color: #BB09ED;
+    color: white;
+    padding: 6px 20px;
+    /* letter-spacing: 1.1px; */
+    /* border: 1.5px solid #BB09ED; */
+    cursor: pointer;
+    border: none;
+}
+
+#demo{
+    font-family: "gilroy";
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 6px;
+    text-transform: capitalize;
+    background-color: #BB09ED;
+    color: white;
+    padding: 6px 20px;
+    /* letter-spacing: 1.1px; */
+    /* border: 1.5px solid #BB09ED; */
+    display: block;
+    margin: 40px auto;
+    cursor: pointer;
+    transform: scale(1);
+    /* transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s; */
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.138);
+}
+
+#demo:hover{
+    transform: scale(1.02);
+    /* transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s; */
+}
+
+
+#rights{
+    font-family: "gilroy";
+    font-weight: 400;
+    text-align: center;
+    color: black;
+}
+
+.right i{
+    display: none;
+}
+
+.navbar2{
+    height: 40vh;
+    width: 100%;
+    /* background-color: #ffe0e0; */
+    background-color: #ededed;
+    /* background-color: #fa7e7e; */
+    position: absolute;
+    top: -100%;
+    /* left: 0%; */
+    /* left: -100%; */
+    z-index: 104;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    /* display: none; */
+    /* display: flex; */
+    /* overflow: hidden; */
+    padding: 30px;
+    text-align: center;
+
+}
+
+.navbar2 .links{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+}
+
+.navbar2 .links a{
+    font-family: "gilroy";
+    font-weight: 500;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.navbar2 .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.navbar2 .button1{
+        font-size: 16px;
+        border-radius: 4px;
+        text-transform: capitalize;
+        padding: 5px 26px;
+        border: 1px solid #BB09ED;
+        /* background-color: transparent; */
+        background-color: white;
+        margin-right: 12px;
+        color: #BB09ED;
+        /* display: none; */
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.138);
+}
+
+.navbar2 .button2{
+    font-size: 16px;
+    border-radius: 4px;
+    text-transform: capitalize;
+    padding: 5px 26px;
+    /* display: none; */
+    background-color: #BB09ED;
+    color: white;
+    border: none;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.138);
+}
+
+.navbar2 i{
+    font-size: 40px;
+    /* margin-top: 50px; */
+    display: block;
+    margin: 50px auto;
+}
+
+
+
+@media(max-width:500px){
+
+    .main{
+        padding: 0px 14px;
+    }
+
+    .nav{
+        padding: 0px 14px;
+    }
+
+    .left{
+        width: 50%;
+    }
+
+    .left img{
+        height: 28px;
+    }
+
+    .center{
+        display: none;
+    }
+
+    .right{
+        width: 50%;
+    }
+
+    .right i{
+        display: initial;
+        font-size: 28px;
+    }
+
+    .right .button1{
+        font-size: 12px;
+        border-radius: 4px;
+        padding: 4px 18px;
+        border: 1px solid #BB09ED;
+        background-color: transparent;
+        margin-right: 12px;
+        display: none;
+    }
+
+    .right .button2{
+        font-size: 12px;
+        border-radius: 4px;
+        padding: 4px 18px;
+        display: none;
+    }
+
+    .left::after{
+        font-size: 11px;
+        height: 17px;
+        width: 40px;
+        margin-left: 8px;
+    }
+
+    #tag{
+        width: 100%;
+        font-size: 16px;
+        line-height: 40px;
+
+    }
+
+    .maintxt{
+        margin-bottom: 0px;
+    }
+
+    .card1{
+        flex-direction: column;
+        padding: 0px;
+        margin-bottom: 30px;
+    }
+
+    .card1 .l1{
+        width: 100%;
+    }
+
+    .card1 img{
+        height: 380px;
+    }
+
+    .card1 .r1{
+        width: 100%;
+    }
+
+    .card1 .r1 p{
+        font-size: 16px;
+        width: 100%;
+        line-height: 40px;
+    }
+
+    .card2{
+        flex-direction: column-reverse;
+        padding: 0px;
+        margin-bottom: 40px;
+    }
+
+    .card2 .r2{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card2 img{
+        height: 330px;
+    }
+
+    .card2 .l2{
+        width: 100%;
+    }
+
+    .card2 .l2 p{
+        font-size: 16px;
+        width: 100%;
+        line-height: 40px;
+    }
+
+    .footer{
+        padding: 30px 12px;
+    }
+
+    .footer #p1{
+        font-size: 15px;
+        width: 100%;
+        margin-top: 14px;
+    }
+
+    .footer #p2{
+        font-size: 15px;
+        width: 100%;
+        margin-top: 14px;
+    }
+
+    #demo{
+        margin: 20px auto;
+    }
+    
+    #rights{
+        font-size: 13px;
+    }
+
+    .popup{
+        width: 94%;
+        height: initial;
+        padding: 12px;
+        border-radius: 16px;
+    }
+
+    .popup h4{
+        font-size: 15px;
+        line-height: 35px;
+        margin-bottom: 6px;
+    }
+
+}
